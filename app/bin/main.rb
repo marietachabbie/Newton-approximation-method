@@ -13,4 +13,5 @@ def approximate
   # iterate(input, first_value, 0)
 end
 
-puts solutions_for('3x^3 + 6x = 0', 2)
+res = solutions_for('3x^3 + 6x = 0', 2)
+puts "For f function '3x^3 + 6x = 0' and 2 as initial value, f(x) = #{res[0]}, f'(x) = #{res[1]} "
