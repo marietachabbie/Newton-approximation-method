@@ -24,7 +24,7 @@ def iterate(polynomial, previous_value, n)
 end
 
 def approximate
-  input = get_input
+  input = get_input()
   # guess_first_value
-  # iterate
+  iterate(input, 2.0, 0)
 end
