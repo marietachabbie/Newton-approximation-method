@@ -4,13 +4,6 @@ class Numeric
   end
 end
 
-def calculate(polynomial, previous_value, n)
-  f_x = solutions_for(polynomial, previous_value)[0]
-  f_prime_x = solutions_for(polynomial, previous_value)[1]
-  current_value = previous_value - (f_x / f_prime_x)
-  output(current_value, polynomial, n)
-end
-
 def guess_first_value(polynomial)
   # do not forget to output it not to lose it in iteration
 end
@@ -20,10 +13,18 @@ def iterate(polynomial, previous_value, n)
     input = gets.strip
     unless input == 'stop'
       n += 1
-      calculate(polynomial, previous_value, n)
+      current_value = find_current(polynomial, previous_value)
+      output(n, current_value)
+      previous_value = current_value
     else
       puts  'Bye!'
       return
     end
   end
+end
+
+def approximate
+  input = get_input
+  # guess_first_value
+  # iterate
 end
