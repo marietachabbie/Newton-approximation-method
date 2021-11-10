@@ -4,8 +4,24 @@ class Numeric
   end
 end
 
-def guess_first_value(polynomial)
+def check_if_symbol(element)
+  case element
+  when '='
+    return 1
+  when '+'
+    return 2
+  when '-'
+    return 3
+  else
+    return 0
+  end
+end
+
+def guess_intinial_value(polynomial)
   # do not forget to output it not to lose it in iteration
+
+  # temporary solution below
+  return 3.0
 end
 
 def iterate(polynomial, previous_value, n)
@@ -14,8 +30,13 @@ def iterate(polynomial, previous_value, n)
     unless input == 'stop'
       n += 1
       current_value = find_current(polynomial, previous_value)
-      output(n, current_value)
-      previous_value = current_value
+      unless current_value == 0.0
+        output(n, current_value)
+        previous_value = current_value
+      else
+        output_final(n, current_value)
+        return
+      end
     else
       puts  'Bye!'
       return
@@ -25,6 +46,6 @@ end
 
 def approximate
   input = get_input()
-  # guess_first_value
-  iterate(input, 2.0, 0)
+  initial_guess = guess_intinial_value(input)
+  iterate(input, initial_guess, 0)
 end

@@ -2,6 +2,8 @@
 # considering 0 < pow <= 9, same for coefficient
 # add or substract number in the end
 # do not forget to round the calculated results
+# input pol = 0 during calculations
+# check for defaults of when-cases everywhere
 
 require 'byebug'
 require '../lib/calculations'
