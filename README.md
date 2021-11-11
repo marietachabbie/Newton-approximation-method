@@ -1,5 +1,7 @@
-# Note: This is not a final version, the project is still in progress. Will be ready soon!
+# Note: This is not a final version, the project is still in progress.
+
 # Newton's-approximation-method
+
 In numerical analysis, Newton's method, is a root-finding algorithm which produces successively better approximations to the roots (or zeroes) of a real-valued function. The most basic version starts with a single-variable function `f` defined for a real variable `x`, the function's derivative `f′`, and an initial guess `x0` for a root of `f`. If the function satisfies sufficient assumptions and the initial guess is close, then
 
 ![](https://bit.ly/3hPouLe)
@@ -11,6 +13,7 @@ is a better approximation of the root than `x0`. Geometrically, `(x1, 0)` is the
 until a sufficiently precise value is reached.
 
 # To run the script:
+
 ```sh
 cd app/bin && ruby main.rb
 ```

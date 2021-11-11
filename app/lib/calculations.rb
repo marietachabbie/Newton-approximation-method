@@ -75,7 +75,6 @@ def find_current(polynomial, previous_value)
   results = calculate(polynomial, previous_value)
   f_x = results[0]
   f_prime_x = results[1]
-  puts "previous: #{previous_value} f_x = #{f_x}, f_prime_x = #{f_prime_x}"
-  current_value = (previous_value - (f_x / f_prime_x)).truncate(6)
+  current_value = (previous_value - ((f_x / f_prime_x)).truncate(6)).truncate(6)
   return current_value
 end
